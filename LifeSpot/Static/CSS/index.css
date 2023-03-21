@@ -1,21 +1,29 @@
 ﻿/* Свойства стиля элемента. Подробнее о них в модуле по CSS */
+/* Простые селекторы*/
 .video-container {
     display: inline-block;
     padding-left: 1%;
+    padding-top: 1%;
 }
 
 .navbar {
     color: darkgray;
-    padding-left: 5%;
+    padding-left: 15%;
 }
 
 header {
     padding-left: 1%;
+    padding-top: 1.2%;
 }
 
 footer {
     position: absolute;
     bottom: 0;
+    font-size: medium;
+    color: dimgrey;
+    width: 100%;
+    height: 5.5rem;
+
 }
 
 aside {
@@ -27,11 +35,14 @@ aside {
     left: 0;
     background-color: #111; /* Черный цвет фона (задан в виде кода) */
     overflow-x: hidden; /* Отключаем горизонтальную прокрутку */
-    padding-top: 20px;
+    padding-top: 2%;
+    font-size: large;
 }
 
 body {
     padding-left: 11%;
 }
 
-
+div, header, footer, p, .navbar, .video-container {
+    font-family: "Helvetica 65 Medium", sans-serif;
+}
