@@ -11,12 +11,17 @@
     padding-left: 15%;
 }
 
+.navbar :hover{
+    color: blueviolet;
+}
+
 header {
     padding-left: 1%;
     padding-top: 1.2%;
 }
 
 footer {
+    background-color:aquamarine;
     position: absolute;
     bottom: 0;
     font-size: medium;
@@ -36,7 +41,7 @@ aside {
     background-color: #111; /* Черный цвет фона (задан в виде кода) */
     overflow-x: hidden; /* Отключаем горизонтальную прокрутку */
     padding-top: 2%;
-    font-size: large;
+    font-size: 14px;
 }
 
 body {
