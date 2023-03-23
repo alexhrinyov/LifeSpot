@@ -7,12 +7,12 @@
 }
 
 .navbar {
-    color: darkgray;
+    color: white;
     padding-left: 15%;
 }
 
 .navbar :hover{
-    color: blueviolet;
+    color: red;
 }
 
 header {
@@ -50,4 +50,15 @@ body {
 
 div, header, footer, p, .navbar, .video-container {
     font-family: "Helvetica 65 Medium", sans-serif;
+}
+
+
+header {
+    color: black;
+    padding-left: 1%;
+    padding-top: 1.2%;
+}
+
+header h1 {
+    color:darkcyan
 }
