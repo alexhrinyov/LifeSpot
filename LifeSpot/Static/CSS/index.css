@@ -62,3 +62,7 @@ header {
 header h1 {
     color:darkcyan
 }
+
+header, body, .video-container {
+    background-color: rgba(50, 25, 78, 0.2)
+}
