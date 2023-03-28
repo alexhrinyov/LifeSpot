@@ -21,13 +21,16 @@ header {
 }
 
 footer {
-    background-color:aquamarine;
+    
     position: absolute;
     bottom: 0;
     font-size: medium;
     color: dimgrey;
     width: 100%;
-    height: 5.5rem;
+    height: 6rem;
+    margin-left: 15vw;
+    margin-top: 3rem;
+
 
 }
 
@@ -46,6 +49,8 @@ aside {
 
 body {
     padding-left: 11%;
+    background-color: antiquewhite;
+ 
 }
 
 div, header, footer, p, .navbar, .video-container {
@@ -63,6 +68,23 @@ header h1 {
     color:darkcyan
 }
 
-header, body, .video-container {
-    background-color: rgba(50, 25, 78, 0.2)
+header, .video-container {
+    background-color: rgba(200, 25, 78, 0.2)
+}
+
+input {
+    font-family: 'Times New Roman';
+    font-size: 14px;
+    height: 16px;
+    border-style: solid;
+    border-color: green;
+}
+
+input:hover{
+    border-style:double;
+    border-color:darkred;
+}
+
+input[type=text]:focus{
+    background-color: darkgreen;
 }
