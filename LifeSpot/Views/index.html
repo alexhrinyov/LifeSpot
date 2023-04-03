@@ -9,7 +9,11 @@
 <body>
     <header>
         <h1>LifeSpot — прямые трансляции с улиц</h1>
-        <input type="text" placeholder="Введите запрос" size="40" />
+        <input type="text" placeholder="Введите запрос" oninput="
+    checkElement()"
+     
+
+               size="40" />
         <p>Здесь вы можете посмотреть видеотрансляции из разных мест</p>
     </header>
     <aside id="sidebar" >
@@ -21,10 +25,14 @@
     </aside>
     <div class="bordered">
 
+       
 
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/LI0MBtU61Oc" title="YouTube video player" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/srlpC5tmhYs" title="YouTube video player" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/JplMzss6_YE" title="YouTube video player" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <h3>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/LI0MBtU61Oc" title="YouTube video player" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/srlpC5tmhYs" title="YouTube video player" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/JplMzss6_YE" title="YouTube video player" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </h3>
+        
     </div>
     <footer>
         <p>LifeSpot - все права защищены</p>
