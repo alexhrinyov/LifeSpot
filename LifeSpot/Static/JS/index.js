@@ -1,29 +1,41 @@
-﻿//let userAge = prompt("Внимание, контент для лиц старше 18! Сколько вам лет?");
-//if (userAge < 18) {
-//    alert("Извините, сходите в гугл.");
-//    window.location.href = "http://www.google.com";
-//}
-//else {
-//    alert("Приветствуем на LifeSpot! Время сейчас: " + new Date().toLocaleString());
-//}
+﻿
+// создадим объект Map для хранения сессии
+let session = new Map();
+// Сохраним UserAgent
+session.set("userAgent", window.navigator.userAgent);
+
+session.set("age", prompt("Внимание, контент для лиц старше 18! Сколько вам лет?"));
+if (session.get("age") < 18) {
+    alert("Извините, сходите в гугл.");
+    window.location.href = "http://www.google.com";
+}
+else {
+    alert("Приветствуем на LifeSpot! Время сейчас: " + new Date().toLocaleString());
+    let startDate = new Date().toLocaleString();
+    session.set("startDate", startDate)
+}
+// Вывод в консоль
+for (let result of session) {
+    console.log(result)
+}
 
 function checkElement() {
     // Получим все контейнеры с видео
     let elements = document.getElementsByTagName('iframe');
-
+    let inputString = document.getElementsByTagName('input')[0].value.toLowerCase();
+   /* debugger;*/
     // Пробежимся в цикле и выведем все в консоль
-    for (let i = 0; i <= elements.length; i++) {
-        // Получим всё что внутри контейнера
-        let childElements = elements[i];
-      
-        // Получим элемент, содержащий описание видео
-        // Он у нас единственный с тегом h3, снова воспользуемся поиском по тегу,
-        let videoDescription = childElements;
-        // Выведем его текст на консоль
-        console.log(videoDescription.textContent);
+    for (let i = 0; i < elements.length; i++) {
+        // Вытаскиваем текст описания видео, которое необходимо отфильтровать
+        let videoText = elements[i].textContent;
 
-        let inputString = document.getElementsByTagName('input')[0].value.toLowerCase();
-        if (!videoDescription.textContent.includes(inputString))
+        // Выполняем фильтрацию, сравнивая значения в нижнем регистре
+        if (!videoText.toLowerCase().includes(inputString.toLowerCase())) {
+            // Описание
+            elements[i].style.display = 'none';
+        } else {
+            elements[i].style.display = 'inline-block';
+        }
 
     }
     
