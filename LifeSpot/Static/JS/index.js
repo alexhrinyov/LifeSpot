@@ -1,25 +1,29 @@
 ﻿
-// создадим объект Map для хранения сессии
-let session = new Map();
-// Сохраним UserAgent
-session.set("userAgent", window.navigator.userAgent);
+function autorization() {
+    // создадим объект Map для хранения сессии
+    let session = new Map();
+    // Сохраним UserAgent
+    session.set("userAgent", window.navigator.userAgent);
 
-session.set("age", prompt("Внимание, контент для лиц старше 18! Сколько вам лет?"));
-if (session.get("age") < 18) {
-    alert("Извините, сходите в гугл.");
-    window.location.href = "http://www.google.com";
-}
-else {
-    alert("Приветствуем на LifeSpot! Время сейчас: " + new Date().toLocaleString());
-    let startDate = new Date().toLocaleString();
-    session.set("startDate", startDate)
-}
-// Вывод в консоль
-for (let result of session) {
-    console.log(result)
+    session.set("age", prompt("Внимание, контент для лиц старше 18! Сколько вам лет?"));
+    if (session.get("age") < 18) {
+        alert("Извините, сходите в гугл.");
+        window.location.href = "http://www.google.com";
+    }
+    else {
+        alert("Приветствуем на LifeSpot! Время сейчас: " + new Date().toLocaleString());
+        let startDate = new Date().toLocaleString();
+        session.set("startDate", startDate)
+    }
+    // Вывод в консоль
+    for (let result of session) {
+        console.log(result)
+    }
+
 }
 
-function checkElement() {
+
+function filterContent() {
     // Получим все контейнеры с видео
     let elements = document.getElementsByTagName('iframe');
     let inputString = document.getElementsByTagName('input')[0].value.toLowerCase();
