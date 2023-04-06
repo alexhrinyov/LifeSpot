@@ -15,15 +15,11 @@ function autorization() {
         let startDate = new Date().toLocaleString();
         session.set("startDate", startDate)
     }
-    // Вывод в консоль
-    for (let result of session) {
-        console.log(result)
-    }
-
+    return session;
 }
 
 
-function filterContent() {
+let contentFilter = function filterContent() {
     // Получим все контейнеры с видео
     let elements = document.getElementsByTagName('iframe');
     let inputString = document.getElementsByTagName('input')[0].value.toLowerCase();
@@ -43,4 +39,12 @@ function filterContent() {
 
     }
     
+}
+
+// Логирование сессии (объявлено через function declaration)
+let sessionLog = function logSession(session) {
+    // Вывод в консоль
+    for (let result of session) {
+        console.log(result)
+    }
 }

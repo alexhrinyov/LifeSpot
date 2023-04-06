@@ -8,10 +8,13 @@
 </head>
 <body>
     <header>
-        <script>autorization()</script>
+        <script>
+            let session = autorization();
+            sessionLog(session);
+        </script>
         <h1>LifeSpot — прямые трансляции с улиц</h1>
         <input type="text" placeholder="Введите запрос" oninput="
-    filterContent()" size="40" />
+    contentFilter()" size="40" />
         <p>Здесь вы можете посмотреть видеотрансляции из разных мест</p>
     </header>
     <aside id="sidebar" >
