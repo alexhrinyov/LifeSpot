@@ -11,15 +11,18 @@
         <script>
             let session = autorization();
             sessionLog(session);
+            setTimeout(() =>
+                alert("Нравится LifeSpot? " + '\n' + "Подпишитесь на наш Instagram @lifespot999!"),
+                30000);
         </script>
         <h1>LifeSpot — прямые трансляции с улиц</h1>
         <input type="text" placeholder="Введите запрос" oninput="
-    contentFilter()" size="40" />
+    contentFilter(inputParseFunction)" size="40" />
         <p>Здесь вы можете посмотреть видеотрансляции из разных мест</p>
     </header>
     <aside id="sidebar" >
         <div class="navbar">
-            <a href ="/" ><p>О проекте</p></a>
+            <a href ="/about" ><p>О проекте</p></a>
             <a href ="/" > <p>Все трансляции</p></a>
         </div>
        

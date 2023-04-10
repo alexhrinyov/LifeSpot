@@ -19,10 +19,10 @@ function autorization() {
 }
 
 
-let contentFilter = function filterContent() {
+function contentFilter(inputParseFunction) {
     // Получим все контейнеры с видео
     let elements = document.getElementsByTagName('iframe');
-    let inputString = document.getElementsByTagName('input')[0].value.toLowerCase();
+    
    /* debugger;*/
     // Пробежимся в цикле и выведем все в консоль
     for (let i = 0; i < elements.length; i++) {
@@ -30,7 +30,7 @@ let contentFilter = function filterContent() {
         let videoText = elements[i].textContent;
 
         // Выполняем фильтрацию, сравнивая значения в нижнем регистре
-        if (!videoText.toLowerCase().includes(inputString.toLowerCase())) {
+        if (!videoText.toLowerCase().includes(inputParseFunction().toLowerCase())) {
             // Описание
             elements[i].style.display = 'none';
         } else {
@@ -41,6 +41,11 @@ let contentFilter = function filterContent() {
     
 }
 
+let inputParseFunction = function() {
+
+   return document.getElementsByTagName('input')[0].value.toLowerCase();
+}
+
 // Логирование сессии (объявлено через function declaration)
 let sessionLog = function logSession(session) {
     // Вывод в консоль
@@ -48,3 +53,6 @@ let sessionLog = function logSession(session) {
         console.log(result)
     }
 }
+
+
+
